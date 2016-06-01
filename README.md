@@ -9,6 +9,10 @@ mvn3 clean compile package
 # NOTE, the first version as it stands will not start because there are no classes yet. 
 java -jar target/spring-boot-primer-1.0.0.jar
 
+# To start the server in debug so that you may attach your debugger, use:
+java -Xdebug -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5009 -jar target/spring-boot-primer-1.0.0.jar
+
+
 # Send a request to the web service
 #This is the base request for processing the sample blog and loan requests.  Note that the output is piped to python - this is done to pretty print the JSON output.
 #You can use either of the sample payloads included at the project root.
