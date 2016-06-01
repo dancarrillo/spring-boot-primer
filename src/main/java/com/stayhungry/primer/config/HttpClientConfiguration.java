@@ -20,6 +20,10 @@ import org.springframework.context.annotation.Configuration;
  * scanning and therefore may also take advantage of @Autowired/@Inject at the field and method level 
  * (BUT NOT at the constructor level).
  * 
+ * This is an example of configuring a bean through code as opposed to XML.  The Bean annotation on httpClient
+ * instructs Spring to create the bean and to inject it into any other class configured with @Inject and a
+ * HttpClient httpClient dependency.  For example, see com.stayhungry.primer.controllers.ApplicationsController
+ * 
  * @author dcarrillo
  *
  */
